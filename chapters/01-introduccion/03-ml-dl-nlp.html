@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>NLP en el mundo real &#8212; Mi aprendizaje sobre NLP</title>
+    <title>Machine learning, Deep Learning y NLP &#8212; Mi aprendizaje sobre NLP</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,7 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="NLP Apuntes" href="../../cover.html" />
+    <link rel="next" title="Acercamientos a NLP" href="04-nlp.html" />
+    <link rel="prev" title="Qué es lenguaje?" href="02-lenguaje.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -94,7 +95,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../cover.html">
-   NLP Apuntes
+   Bienvenid@
   </a>
  </li>
 </ul>
@@ -104,9 +105,24 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-intro.html">
+   NLP en el mundo real
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-lenguaje.html">
+   Qué es lenguaje?
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   NLP en el mundo real
+   Machine learning, Deep Learning y NLP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-nlp.html">
+   Acercamientos a NLP
   </a>
  </li>
 </ul>
@@ -150,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/chapters/01-introduccion/que-es-nlp.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/chapters/01-introduccion/03-ml-dl-nlp.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -170,7 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rickiwasho/nlp-apuntes/issues/new?title=Issue%20on%20page%20%2Fchapters/01-introduccion/que-es-nlp.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rickiwasho/nlp-apuntes/issues/new?title=Issue%20on%20page%20%2Fchapters/01-introduccion/03-ml-dl-nlp.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -191,7 +207,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rickiwasho/nlp-apuntes/master?urlpath=tree/docs/chapters/01-introduccion/que-es-nlp.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rickiwasho/nlp-apuntes/master?urlpath=tree/docs/chapters/01-introduccion/03-ml-dl-nlp.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -208,44 +224,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tareas-nucleo">
-   Tareas núcleo:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aplicaciones-generales">
-   Aplicaciones generales:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aplicaciones-especificas-de-la-industria">
-   Aplicaciones específicas de la industria:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#que-es-lenguaje">
-   Qué es lenguaje?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#machine-learning-deep-learning-y-nlp">
-   Machine learning, Deep Learning y NLP
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acercamientos-a-nlp">
-   Acercamientos a NLP
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -253,97 +231,19 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>NLP en el mundo real</h1>
+                <h1>Machine learning, Deep Learning y NLP</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tareas-nucleo">
-   Tareas núcleo:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aplicaciones-generales">
-   Aplicaciones generales:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aplicaciones-especificas-de-la-industria">
-   Aplicaciones específicas de la industria:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#que-es-lenguaje">
-   Qué es lenguaje?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#machine-learning-deep-learning-y-nlp">
-   Machine learning, Deep Learning y NLP
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acercamientos-a-nlp">
-   Acercamientos a NLP
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="nlp-en-el-mundo-real">
-<h1>NLP en el mundo real<a class="headerlink" href="#nlp-en-el-mundo-real" title="Permalink to this headline">¶</a></h1>
-<p>El lenguaje es el medio de comunicación primario entre humanos desde tiempos inmemoriales, pero los computadores sólo pueden procesar datos binarios, entonces ¿Cómo hacemos que las máquinas puedan entender nuestro lenguaje rico en redundancias, abstracciones y metáforas? Es aquí nonde el procesamiento natural del lenguaje (NLP) entra en juego. NLP es un área de las ciencias de la computación que busca mediante métodos analizar, modelar y entender el lenguaje humano.</p>
-<p>Algunas tareas y aplicaciones de NLP son las siguientes:</p>
-<section id="tareas-nucleo">
-<h2>Tareas núcleo:<a class="headerlink" href="#tareas-nucleo" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Clasificación de texto</p></li>
-<li><p>Extracción de información</p></li>
-<li><p>Agente conversacional o sistemas de diálogo</p></li>
-<li><p>Recuperación de información</p></li>
-<li><p>Sistemas de respuesta a preguntas</p></li>
-</ul>
-</section>
-<section id="aplicaciones-generales">
-<h2>Aplicaciones generales:<a class="headerlink" href="#aplicaciones-generales" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Clasificación de correos spam</p></li>
-<li><p>Extracción de eventos de calendario</p></li>
-<li><p>Asistentes personales</p></li>
-<li><p>Motores de búsqueda</p></li>
-</ul>
-</section>
-<section id="aplicaciones-especificas-de-la-industria">
-<h2>Aplicaciones específicas de la industria:<a class="headerlink" href="#aplicaciones-especificas-de-la-industria" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Análisis de redes sociales</p></li>
-<li><p>Extracción de catálogos de retail</p></li>
-<li><p>Análisis de registros médicos</p></li>
-<li><p>Análisis financieros</p></li>
-<li><p>Extracción de entidades legales</p></li>
-</ul>
-</section>
-<section id="que-es-lenguaje">
-<h2>Qué es lenguaje?<a class="headerlink" href="#que-es-lenguaje" title="Permalink to this headline">¶</a></h2>
-</section>
-<section id="machine-learning-deep-learning-y-nlp">
-<h2>Machine learning, Deep Learning y NLP<a class="headerlink" href="#machine-learning-deep-learning-y-nlp" title="Permalink to this headline">¶</a></h2>
-</section>
-<section id="acercamientos-a-nlp">
-<h2>Acercamientos a NLP<a class="headerlink" href="#acercamientos-a-nlp" title="Permalink to this headline">¶</a></h2>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="machine-learning-deep-learning-y-nlp">
+<h1>Machine learning, Deep Learning y NLP<a class="headerlink" href="#machine-learning-deep-learning-y-nlp" title="Permalink to this headline">¶</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -371,12 +271,19 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../../cover.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02-lenguaje.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">NLP Apuntes</p>
+            <p class="prev-next-title">Qué es lenguaje?</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="04-nlp.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Acercamientos a NLP</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
