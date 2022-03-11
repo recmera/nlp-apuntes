@@ -1,5 +1,7 @@
-- file: cover
-  numbered: true
-- part: Introducción a NLP
-  chapters:
+format: jb-book
+root: cover
+parts:
+
+  - caption: Introducción a NLP
+    chapters:
     - file: chapters/01-introduccion/que-es-nlp
