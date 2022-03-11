@@ -17,8 +17,8 @@ venv.bak/
 
 
 # Jupyter book
-book/_build/
-book/features
+apuntes/_build/
+apuntes/features
 in-progress
 scraps
 Workbook-Solutions
