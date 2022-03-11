@@ -4,4 +4,7 @@ parts:
 
   - caption: Introducción a NLP
     chapters:
-    - file: chapters/01-introduccion/que-es-nlp
+    - file: chapters/01-introduccion/01-intro
+    - file: chapters/01-introduccion/02-lenguaje
+    - file: chapters/01-introduccion/03-ml-dl-nlp
+    - file: chapters/01-introduccion/04-nlp
