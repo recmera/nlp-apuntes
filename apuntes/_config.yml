@@ -5,6 +5,7 @@ logo: logo.png
 
 execute:
   execute_notebooks: force
+  allow_errors: true
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -26,3 +27,23 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_edit_page_button: false
+  only_build_toc_files: true
+
+sphinx:
+  config:
+    html_show_copyright: false
+    language: es
+    myst_enable_extensions: 
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+latex:
+  latex_documents:
+    targetname: book.tex
