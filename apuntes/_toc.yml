@@ -1,7 +1,9 @@
 format: jb-book
 root: cover
-parts:
+options: 
+  numbered: True
 
+parts:
   - caption: Introducción a NLP
     chapters:
     - file: chapters/01-introduccion/01-intro
@@ -9,11 +11,13 @@ parts:
     - file: chapters/01-introduccion/03-ml-dl-nlp
     - file: chapters/01-introduccion/04-nlp
     
- - caption: Pipelines de procesamiento 
+  - caption: Pipelines de procesamiento 
     chapters:
     - file: chapters/02-pipeline/01-data-adquisition
     - file: chapters/02-pipeline/02-text-extraction-cleanup
     - file: chapters/02-pipeline/03-preprocesamiento
     - file: chapters/02-pipeline/04-feature-engineering
     - file: chapters/02-pipeline/05-modeling-evaluation
-    
+
+
+
