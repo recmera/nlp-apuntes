@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>¿Qué es el lenguaje? &#8212; Mi aprendizaje sobre NLP</title>
+    <title>Extracción y limpieza de textos &#8212; Mi aprendizaje sobre NLP</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,8 +55,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Machine learning, Deep Learning y NLP" href="03-ml-dl-nlp.html" />
-    <link rel="prev" title="NLP en el mundo real" href="01-intro.html" />
+    <link rel="next" title="Pre-procesamiento" href="03-preprocesamiento.html" />
+    <link rel="prev" title="Adquisición de datos" href="01-data-adquisition.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="es">
     
@@ -105,24 +105,24 @@ const thebe_selector_output = ".output, .cell_output"
   Introducción a NLP
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01-intro.html">
+  <a class="reference internal" href="../01-introduccion/01-intro.html">
    NLP en el mundo real
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-introduccion/02-lenguaje.html">
    ¿Qué es el lenguaje?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-ml-dl-nlp.html">
+  <a class="reference internal" href="../01-introduccion/03-ml-dl-nlp.html">
    Machine learning, Deep Learning y NLP
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04-nlp.html">
+  <a class="reference internal" href="../01-introduccion/04-nlp.html">
    Acercamientos a NLP
   </a>
  </li>
@@ -132,29 +132,29 @@ const thebe_selector_output = ".output, .cell_output"
   Pipelines de procesamiento
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-pipeline/01-data-adquisition.html">
+  <a class="reference internal" href="01-data-adquisition.html">
    Adquisición de datos
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../02-pipeline/02-text-extraction-cleanup.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Extracción y limpieza de textos
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-pipeline/03-preprocesamiento.html">
+  <a class="reference internal" href="03-preprocesamiento.html">
    Pre-procesamiento
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-pipeline/04-feature-engineering.html">
+  <a class="reference internal" href="04-feature-engineering.html">
    Feature engineering y extracción de características
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-pipeline/05-modeling-evaluation.html">
+  <a class="reference internal" href="05-modeling-evaluation.html">
    Modelamiento y evaluación del pipeline
   </a>
  </li>
@@ -199,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/chapters/01-introduccion/02-lenguaje.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/chapters/02-pipeline/02-text-extraction-cleanup.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -219,7 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
                     class="fab fa-github"></i>repositorio</button></a>
         <a class="issues-button"
-            href="https://github.com/rickiwasho/nlp-apuntes/issues/new?title=Issue%20on%20page%20%2Fchapters/01-introduccion/02-lenguaje.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rickiwasho/nlp-apuntes/issues/new?title=Issue%20on%20page%20%2Fchapters/02-pipeline/02-text-extraction-cleanup.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
         
@@ -240,7 +240,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rickiwasho/nlp-apuntes/master?urlpath=tree/docs/chapters/01-introduccion/02-lenguaje.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rickiwasho/nlp-apuntes/master?urlpath=tree/docs/chapters/02-pipeline/02-text-extraction-cleanup.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -257,19 +257,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenido
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#componentes-del-lenguaje">
-   Componentes del lenguaje
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -277,54 +264,19 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>¿Qué es el lenguaje?</h1>
+                <h1>Extracción y limpieza de textos</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contenido </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#componentes-del-lenguaje">
-   Componentes del lenguaje
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="que-es-el-lenguaje">
-<h1>¿Qué es el lenguaje?<a class="headerlink" href="#que-es-el-lenguaje" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>El lenguaje es un sistema estructurado de comunicación que involucra combinaciones complejas de sus componentes constituyentes, tales como caracteres, palabras, oraciones, etc. La lingüística es el estudio sistemático del lenguaje. Para estudiar NLP es importante entender algunos conceptos lingüísticos sobre cómo el lenguaje está estructurado.</p>
-<p>Podemos pensar en el lenguaje humano como un compuesto de cuatro grandes componentes: fonemas, morfemas y lexemas, sintaxis, y finalmente, contexto. Las aplicaciones de NLP necesitan conocer los diferentes niveles de estos componentes básicos, desde los sonidos básicos del lenguaje (fonemas) hasta el texto con algunas expresiones significativas (contexto).</p>
-<a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0103.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0103.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0103.png" style="width: 400px;" /></a>
-<section id="componentes-del-lenguaje">
-<h2>Componentes del lenguaje<a class="headerlink" href="#componentes-del-lenguaje" title="Enlazar permanentemente con este título">¶</a></h2>
-<p><strong>Fonemas</strong></p>
-<p>Los <em>fonemas</em> son las pequeñas unidades de sonido en el lenguaje. Estas pueden no tener ningún significado por si mismas pero pueden inducir significados cuando se pronuncia en combinación con otros fonemas. Por ejemplo, el inglés estándar tiene 44 fonemas, que son letras o combinaciones de letras.</p>
-<a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0104.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0104.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0104.png" style="width: 500px;" /></a>
-<p>Los fonemas son importantes en las aplicaciones relacionadas con el entendimiento del habla, como por ejemplo, el reconocimiento del habla, transcripción habla a texto y conversión texto a habla.</p>
-<p><strong>Morfemas y lexemas</strong></p>
-<p>Los <em>morfemas</em> son las pequeñas unidades del lenguaje que tienen significado. Están formadas por combinaciones de fonemas. No todos los morfemas son palabras, pero todos los prefijos y sufijos son morfemas. Por ejemplo, en la palabra “multimedia”, “multi-” no es una palabra sino que un prefijo que cambia el significado cuando se junta con “media”. “Multi-” es un morfema.</p>
-<a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0105.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0105.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0105.png" style="width: 400px;" /></a>
-<p>Los lexemas son variaciones estructurales de los morfemas relacionados entre sí por el significado. Por ejemplo, “run” y “running” pertenecen a la misma forma o familia de lexema. El análisis morfológico, que analiza la estructura de las palabras mediante el estudio de sus morfemas y lexemas, es un bloque fundamental de muchas tareas de NLP, como la ‘tokenization’, el aprendizaje de ‘word embeddings’ y el ‘tagging’ de partes del discurso (part-of-speech tagging).</p>
-<p><strong>Sintaxis</strong></p>
-<p>La sintaxis es un conjunto de reglas para construir oraciones gramaticalmente correctas a partir de palabras y frases en un lenguaje. En lingüística, la estructura sintáctica es representada de diferentes formas. Un común acercamiento es representar las oraciones como un árbol.</p>
-<a class="reference internal image-reference" href="https://www.nltk.org/book/tree_images/ch08-tree-4.png"><img alt="https://www.nltk.org/book/tree_images/ch08-tree-4.png" src="https://www.nltk.org/book/tree_images/ch08-tree-4.png" style="width: 400px;" /></a>
-<p>La sintaxis entrega una estructura jerárquica al lenguaje, con palabras en el nivel más bajo, seguidas de etiquetas como verbos, pronombres, etc., seguidas de frases y terminando con una oración en el nivel más alto. <a class="reference external" href="https://en.wikipedia.org/wiki/Phrase_structure_rules">(Ver más…)</a></p>
-<p>La sintaxis de un lenguaje puede ser muy diferente a la sintaxis de otro lenguaje. A su vez, el acercamiento necesario para procesar un lenguaje es influenciado por su sintaxis.</p>
-<p><strong>Contexto</strong></p>
-<p>El contexto es cómo varias partes de un idioma se unen para transmitir una determinado significado. El contexto incluye referencias a largo plazo, conocimiento del mundo y sentido común junto con el significado literal de palabras y frases. El significado de una oración puede cambiar según el contexto, ya que las palabras y frases a veces pueden tener múltiples significados. Generalmente, el contexto se compone de semántica y pragmática. La semántica es el significado directo de las palabras y oraciones sin el contexto externo de la conversación que nos permita inferir el significado implícito. Las tareas complejas de NLP, como la detección de sarcasmo, generación automática de resúmenes (text summarization) y el modelado de tópicos, son algunas de las tareas que utilizan mucho el contexto.</p>
-<p>La lingüística es el estudio del lenguaje y, por lo tanto, es un campo de estudio bastante amplio. Las ideas introducidas abarcan solo conceptos básicos para ilustrar el rol de la lingüística en NLP.</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="extraccion-y-limpieza-de-textos">
+<h1>Extracción y limpieza de textos<a class="headerlink" href="#extraccion-y-limpieza-de-textos" title="Enlazar permanentemente con este título">¶</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -340,7 +292,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chapters/01-introduccion"
+            path: "./chapters/02-pipeline"
         },
         predefinedOutput: true
     }
@@ -352,17 +304,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="01-intro.html" title="anterior página">
+    <a class='left-prev' id="prev-link" href="01-data-adquisition.html" title="anterior página">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">anterior</p>
-            <p class="prev-next-title">NLP en el mundo real</p>
+            <p class="prev-next-title">Adquisición de datos</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="03-ml-dl-nlp.html" title="siguiente página">
+    <a class='right-next' id="next-link" href="03-preprocesamiento.html" title="siguiente página">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Machine learning, Deep Learning y NLP</p>
+        <p class="prev-next-title">Pre-procesamiento</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
