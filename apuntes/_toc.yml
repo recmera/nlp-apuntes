@@ -20,6 +20,7 @@ parts:
     - file: chapters/02-pipeline/05-modeling-evaluation
 
   - caption: Representaciones del texto
+    chapters:
     - file: chapters/03-representacion-texto/01-vector-space-models
     - file: chapters/03-representacion-texto/02-vectorization-approaches
     - file: chapters/03-representacion-texto/01-distributed-representations
