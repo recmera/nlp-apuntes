@@ -23,10 +23,10 @@ parts:
     chapters:
     - file: chapters/03-representacion-texto/01-vector-space-models
     - file: chapters/03-representacion-texto/02-vectorization-approaches
-    - file: chapters/03-representacion-texto/01-distributed-representations
-    - file: chapters/03-representacion-texto/01-universal-text-representations
-    - file: chapters/03-representacion-texto/01-visualizing-embeddings
-    - file: chapters/03-representacion-texto/01-handcrafted-representations
+    - file: chapters/03-representacion-texto/03-distributed-representations
+    - file: chapters/03-representacion-texto/04-universal-text-representations
+    - file: chapters/03-representacion-texto/05-visualizing-embeddings
+    - file: chapters/03-representacion-texto/06-hancrafted-representations
 
 
 
