@@ -19,5 +19,14 @@ parts:
     - file: chapters/02-pipeline/04-feature-engineering
     - file: chapters/02-pipeline/05-modeling-evaluation
 
+  - caption: Representaciones del texto
+    - file: chapters/03-representacion-texto/01-vector-space-models
+    - file: chapters/03-representacion-texto/02-vectorization-approaches
+    - file: chapters/03-representacion-texto/01-distributed-representations
+    - file: chapters/03-representacion-texto/01-universal-text-representations
+    - file: chapters/03-representacion-texto/01-visualizing-embeddings
+    - file: chapters/03-representacion-texto/01-handcrafted-representations
+
+
 
 
