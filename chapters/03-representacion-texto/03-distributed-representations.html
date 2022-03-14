@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Modelamiento y evaluación del pipeline &#8212; Mi aprendizaje sobre NLP</title>
+    <title>Representaciones distribuidas &#8212; Mi aprendizaje sobre NLP</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,8 +55,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Modelos de espacios vectoriales" href="../03-representacion-texto/01-vector-space-models.html" />
-    <link rel="prev" title="Feature engineering y extracción de características" href="04-feature-engineering.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="es">
     
@@ -132,29 +130,29 @@ const thebe_selector_output = ".output, .cell_output"
   Pipelines de procesamiento
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01-data-adquisition.html">
+  <a class="reference internal" href="../02-pipeline/01-data-adquisition.html">
    Adquisición de datos
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02-text-extraction-cleanup.html">
+  <a class="reference internal" href="../02-pipeline/02-text-extraction-cleanup.html">
    Extracción y limpieza de textos
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-preprocesamiento.html">
+  <a class="reference internal" href="../02-pipeline/03-preprocesamiento.html">
    Pre-procesamiento
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04-feature-engineering.html">
+  <a class="reference internal" href="../02-pipeline/04-feature-engineering.html">
    Feature engineering y extracción de características
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-pipeline/05-modeling-evaluation.html">
    Modelamiento y evaluación del pipeline
   </a>
  </li>
@@ -166,12 +164,12 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../03-representacion-texto/01-vector-space-models.html">
+  <a class="reference internal" href="01-vector-space-models.html">
    Modelos de espacios vectoriales
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../03-representacion-texto/02-vectorization-approaches.html">
+  <a class="reference internal" href="02-vectorization-approaches.html">
    Enfoques básicos de vectorización
   </a>
  </li>
@@ -216,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/chapters/02-pipeline/05-modeling-evaluation.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/chapters/03-representacion-texto/03-distributed-representations.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -236,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
                     class="fab fa-github"></i>repositorio</button></a>
         <a class="issues-button"
-            href="https://github.com/rickiwasho/nlp-apuntes/issues/new?title=Issue%20on%20page%20%2Fchapters/02-pipeline/05-modeling-evaluation.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rickiwasho/nlp-apuntes/issues/new?title=Issue%20on%20page%20%2Fchapters/03-representacion-texto/03-distributed-representations.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
         
@@ -257,7 +255,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rickiwasho/nlp-apuntes/master?urlpath=tree/docs/chapters/02-pipeline/05-modeling-evaluation.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rickiwasho/nlp-apuntes/master?urlpath=tree/docs/chapters/03-representacion-texto/03-distributed-representations.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -281,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Modelamiento y evaluación del pipeline</h1>
+                <h1>Representaciones distribuidas</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -292,8 +290,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="modelamiento-y-evaluacion-del-pipeline">
-<h1>Modelamiento y evaluación del pipeline<a class="headerlink" href="#modelamiento-y-evaluacion-del-pipeline" title="Enlazar permanentemente con este título">¶</a></h1>
+  <section id="representaciones-distribuidas">
+<h1>Representaciones distribuidas<a class="headerlink" href="#representaciones-distribuidas" title="Enlazar permanentemente con este título">¶</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -309,7 +307,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chapters/02-pipeline"
+            path: "./chapters/03-representacion-texto"
         },
         predefinedOutput: true
     }
@@ -320,21 +318,7 @@ const thebe_selector_output = ".output, .cell_output"
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="04-feature-engineering.html" title="anterior página">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">anterior</p>
-            <p class="prev-next-title">Feature engineering y extracción de características</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../03-representacion-texto/01-vector-space-models.html" title="siguiente página">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Modelos de espacios vectoriales</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
