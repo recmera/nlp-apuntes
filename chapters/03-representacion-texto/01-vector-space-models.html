@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Enfoques básicos de vectorización" href="02-vectorization-approaches.html" />
+    <link rel="next" title="Bag of Words" href="01z1-bag-of-words.html" />
     <link rel="prev" title="Modelamiento y evaluación del pipeline" href="../02-pipeline/05-modeling-evaluation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="es">
@@ -102,7 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  I. Introducción a NLP
+  Introducción a NLP
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -129,7 +129,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  II. Pipelines de procesamiento
+  Pipelines de procesamiento
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -161,80 +161,30 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  III. Representaciones del texto
+  Representaciones del texto
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Modelos de espacios vectoriales
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01z1-bag-of-words.html">
+     Bag of Words
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02-vectorization-approaches.html">
    Enfoques básicos de vectorización
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03-distributed-representations.html">
-   Representaciones distribuidas
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04-universal-text-representations.html">
-   Representaciones de texto universales
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05-visualizing-embeddings.html">
-   Visualización de Embeddings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06-hancrafted-representations.html">
-   Representaciones de características hechas a mano
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  IV. Clasificación de texto
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../04-clasificacion-texto/01-aplicaciones.html">
-   Aplicaciones
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../04-clasificacion-texto/02-textclassification-pipeline.html">
-   Pipeline para construir sistemas de clasificación de texto
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../04-clasificacion-texto/03-one-many.html">
-   Un pipeline, muchos clasificadores
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../04-clasificacion-texto/04-neural-embeddings.html">
-   Usando Neural Embeddings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../04-clasificacion-texto/05-Deep-learning.html">
-   Deep Learning para la clasificación de texto
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../04-clasificacion-texto/06-interpretating-models.html">
-   Interpretando los modelos de clasificación de texto
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../04-clasificacion-texto/07-aprendizaje-pocos-datos.html">
-   Aprendizaje con pocos datos y adaptando el modelo a nuevos dominios
   </a>
  </li>
 </ul>
@@ -336,6 +286,29 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#title-1">
+   TITLE 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#title-2">
+   title 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#title-01">
+   title 01
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -348,14 +321,63 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contenido </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#title-1">
+   TITLE 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#title-2">
+   title 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#title-01">
+   title 01
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <section id="modelos-de-espacios-vectoriales">
+  <section class="tex2jax_ignore mathjax_ignore" id="modelos-de-espacios-vectoriales">
 <h1>Modelos de espacios vectoriales<a class="headerlink" href="#modelos-de-espacios-vectoriales" title="Enlazar permanentemente con este título">¶</a></h1>
+<section id="title-1">
+<h2>TITLE 1<a class="headerlink" href="#title-1" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, risus vitae placerat posuere, sem nibh ornare velit, ut maximus purus enim non elit. Donec sit amet venenatis dolor, sed elementum tortor. Fusce fringilla pellentesque nisl vel pharetra. Cras non vulputate augue. Suspendisse viverra vestibulum sapien, ac vehicula lacus vulputate nec. Pellentesque maximus aliquam lacinia. Sed convallis velit a leo tincidunt dignissim. Quisque sed tortor lacus. Vivamus id velit vitae massa hendrerit elementum. Curabitur ac vehicula lorem, sed elementum mi. Duis sagittis sapien fringilla massa maximus, ac hendrerit risus cursus.</p>
+<p>Fusce ac ornare massa. Phasellus nec urna quis lectus sollicitudin sollicitudin. Mauris vitae ultrices nisl. Proin facilisis aliquet eros, et iaculis est cursus volutpat. Sed eget sodales tortor. Etiam lacinia consectetur malesuada. Sed auctor lectus et est placerat, in sollicitudin nibh pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras nec turpis at arcu porttitor fermentum id nec leo. In hac habitasse platea dictumst. Nullam ac velit ut neque interdum molestie. Suspendisse placerat vitae nibh non bibendum. In a dignissim diam. Nam varius commodo tempor. Sed in sodales elit. Vestibulum blandit lectus ut purus faucibus eleifend.</p>
+<p>Nunc massa elit, fringilla vitae lectus at, cursus ultricies nulla. Nullam eget molestie nisl, sollicitudin commodo erat. Suspendisse potenti. Aenean in leo orci. Maecenas ullamcorper turpis nec metus fringilla euismod. Aliquam ut dolor venenatis, sollicitudin quam ac, tempus orci. Etiam euismod, purus ac consectetur condimentum, turpis nunc dictum mauris, eu lacinia nisi nisi sed risus. Fusce non nulla eget neque posuere efficitur sit amet ut dui. Nulla rhoncus et orci ac accumsan. Quisque consectetur tempor nibh, vitae blandit nibh maximus et. Nam ullamcorper purus id leo fringilla, tincidunt placerat libero pretium. Nunc at blandit mi.</p>
+<p>Aliquam maximus dui quam, sed tristique lectus ullamcorper eget. Proin dolor lacus, lobortis quis eros sed, placerat fringilla urna. Curabitur molestie, nibh vitae faucibus tincidunt, sem eros feugiat felis, ut pellentesque turpis risus id augue. Praesent posuere nisl ut lorem lacinia, eget lobortis tellus congue. Pellentesque lacus dolor, viverra ac varius eget, pellentesque sit amet dui. Nam sed enim suscipit, egestas neque eu, accumsan orci. Integer hendrerit suscipit malesuada. Quisque fringilla blandit augue, id sollicitudin magna faucibus ac. Ut sed pellentesque sapien, eget blandit libero. Morbi quis sagittis nulla. Aliquam vitae enim lobortis, lacinia tortor sed, porta dui. Pellentesque in diam ac magna lobortis consequat. Mauris porttitor sapien id eros venenatis, vitae ultricies elit sodales. Ut in sodales purus. Duis fringilla in eros ac vulputate. Donec lacinia euismod massa eget feugiat.</p>
+<p>In finibus interdum mollis. Donec in dictum felis. Cras vel ornare neque. Curabitur augue nulla, dictum at libero nec, aliquet mollis ante. Donec sed justo tortor. Duis pellentesque egestas urna ut hendrerit. Nunc metus mi, vehicula in nunc sit amet, euismod varius libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce eu tincidunt nunc. Quisque non ipsum maximus, accumsan velit non, placerat ex. Aliquam dapibus sem nec eleifend consectetur. Suspendisse viverra blandit purus, sed sollicitudin augue facilisis id.</p>
+</section>
+<section id="title-2">
+<h2>title 2<a class="headerlink" href="#title-2" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, risus vitae placerat posuere, sem nibh ornare velit, ut maximus purus enim non elit. Donec sit amet venenatis dolor, sed elementum tortor. Fusce fringilla pellentesque nisl vel pharetra. Cras non vulputate augue. Suspendisse viverra vestibulum sapien, ac vehicula lacus vulputate nec. Pellentesque maximus aliquam lacinia. Sed convallis velit a leo tincidunt dignissim. Quisque sed tortor lacus. Vivamus id velit vitae massa hendrerit elementum. Curabitur ac vehicula lorem, sed elementum mi. Duis sagittis sapien fringilla massa maximus, ac hendrerit risus cursus.</p>
+<p>Fusce ac ornare massa. Phasellus nec urna quis lectus sollicitudin sollicitudin. Mauris vitae ultrices nisl. Proin facilisis aliquet eros, et iaculis est cursus volutpat. Sed eget sodales tortor. Etiam lacinia consectetur malesuada. Sed auctor lectus et est placerat, in sollicitudin nibh pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras nec turpis at arcu porttitor fermentum id nec leo. In hac habitasse platea dictumst. Nullam ac velit ut neque interdum molestie. Suspendisse placerat vitae nibh non bibendum. In a dignissim diam. Nam varius commodo tempor. Sed in sodales elit. Vestibulum blandit lectus ut purus faucibus eleifend.</p>
+<p>Nunc massa elit, fringilla vitae lectus at, cursus ultricies nulla. Nullam eget molestie nisl, sollicitudin commodo erat. Suspendisse potenti. Aenean in leo orci. Maecenas ullamcorper turpis nec metus fringilla euismod. Aliquam ut dolor venenatis, sollicitudin quam ac, tempus orci. Etiam euismod, purus ac consectetur condimentum, turpis nunc dictum mauris, eu lacinia nisi nisi sed risus. Fusce non nulla eget neque posuere efficitur sit amet ut dui. Nulla rhoncus et orci ac accumsan. Quisque consectetur tempor nibh, vitae blandit nibh maximus et. Nam ullamcorper purus id leo fringilla, tincidunt placerat libero pretium. Nunc at blandit mi.</p>
+<p>Aliquam maximus dui quam, sed tristique lectus ullamcorper eget. Proin dolor lacus, lobortis quis eros sed, placerat fringilla urna. Curabitur molestie, nibh vitae faucibus tincidunt, sem eros feugiat felis, ut pellentesque turpis risus id augue. Praesent posuere nisl ut lorem lacinia, eget lobortis tellus congue. Pellentesque lacus dolor, viverra ac varius eget, pellentesque sit amet dui. Nam sed enim suscipit, egestas neque eu, accumsan orci. Integer hendrerit suscipit malesuada. Quisque fringilla blandit augue, id sollicitudin magna faucibus ac. Ut sed pellentesque sapien, eget blandit libero. Morbi quis sagittis nulla. Aliquam vitae enim lobortis, lacinia tortor sed, porta dui. Pellentesque in diam ac magna lobortis consequat. Mauris porttitor sapien id eros venenatis, vitae ultricies elit sodales. Ut in sodales purus. Duis fringilla in eros ac vulputate. Donec lacinia euismod massa eget feugiat.</p>
+<p>In finibus interdum mollis. Donec in dictum felis. Cras vel ornare neque. Curabitur augue nulla, dictum at libero nec, aliquet mollis ante. Donec sed justo tortor. Duis pellentesque egestas urna ut hendrerit. Nunc metus mi, vehicula in nunc sit amet, euismod varius libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce eu tincidunt nunc. Quisque non ipsum maximus, accumsan velit non, placerat ex. Aliquam dapibus sem nec eleifend consectetur. Suspendisse viverra blandit purus, sed sollicitudin augue facilisis id.</p>
+</section>
+<section id="title-01">
+<h2>title 01<a class="headerlink" href="#title-01" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere, risus vitae placerat posuere, sem nibh ornare velit, ut maximus purus enim non elit. Donec sit amet venenatis dolor, sed elementum tortor. Fusce fringilla pellentesque nisl vel pharetra. Cras non vulputate augue. Suspendisse viverra vestibulum sapien, ac vehicula lacus vulputate nec. Pellentesque maximus aliquam lacinia. Sed convallis velit a leo tincidunt dignissim. Quisque sed tortor lacus. Vivamus id velit vitae massa hendrerit elementum. Curabitur ac vehicula lorem, sed elementum mi. Duis sagittis sapien fringilla massa maximus, ac hendrerit risus cursus.</p>
+<p>Fusce ac ornare massa. Phasellus nec urna quis lectus sollicitudin sollicitudin. Mauris vitae ultrices nisl. Proin facilisis aliquet eros, et iaculis est cursus volutpat. Sed eget sodales tortor. Etiam lacinia consectetur malesuada. Sed auctor lectus et est placerat, in sollicitudin nibh pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras nec turpis at arcu porttitor fermentum id nec leo. In hac habitasse platea dictumst. Nullam ac velit ut neque interdum molestie. Suspendisse placerat vitae nibh non bibendum. In a dignissim diam. Nam varius commodo tempor. Sed in sodales elit. Vestibulum blandit lectus ut purus faucibus eleifend.</p>
+<p>Nunc massa elit, fringilla vitae lectus at, cursus ultricies nulla. Nullam eget molestie nisl, sollicitudin commodo erat. Suspendisse potenti. Aenean in leo orci. Maecenas ullamcorper turpis nec metus fringilla euismod. Aliquam ut dolor venenatis, sollicitudin quam ac, tempus orci. Etiam euismod, purus ac consectetur condimentum, turpis nunc dictum mauris, eu lacinia nisi nisi sed risus. Fusce non nulla eget neque posuere efficitur sit amet ut dui. Nulla rhoncus et orci ac accumsan. Quisque consectetur tempor nibh, vitae blandit nibh maximus et. Nam ullamcorper purus id leo fringilla, tincidunt placerat libero pretium. Nunc at blandit mi.</p>
+<p>Aliquam maximus dui quam, sed tristique lectus ullamcorper eget. Proin dolor lacus, lobortis quis eros sed, placerat fringilla urna. Curabitur molestie, nibh vitae faucibus tincidunt, sem eros feugiat felis, ut pellentesque turpis risus id augue. Praesent posuere nisl ut lorem lacinia, eget lobortis tellus congue. Pellentesque lacus dolor, viverra ac varius eget, pellentesque sit amet dui. Nam sed enim suscipit, egestas neque eu, accumsan orci. Integer hendrerit suscipit malesuada. Quisque fringilla blandit augue, id sollicitudin magna faucibus ac. Ut sed pellentesque sapien, eget blandit libero. Morbi quis sagittis nulla. Aliquam vitae enim lobortis, lacinia tortor sed, porta dui. Pellentesque in diam ac magna lobortis consequat. Mauris porttitor sapien id eros venenatis, vitae ultricies elit sodales. Ut in sodales purus. Duis fringilla in eros ac vulputate. Donec lacinia euismod massa eget feugiat.</p>
+<p>In finibus interdum mollis. Donec in dictum felis. Cras vel ornare neque. Curabitur augue nulla, dictum at libero nec, aliquet mollis ante. Donec sed justo tortor. Duis pellentesque egestas urna ut hendrerit. Nunc metus mi, vehicula in nunc sit amet, euismod varius libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce eu tincidunt nunc. Quisque non ipsum maximus, accumsan velit non, placerat ex. Aliquam dapibus sem nec eleifend consectetur. Suspendisse viverra blandit purus, sed sollicitudin augue facilisis id.</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -390,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-title">Modelamiento y evaluación del pipeline</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="02-vectorization-approaches.html" title="siguiente página">
+    <a class='right-next' id="next-link" href="01z1-bag-of-words.html" title="siguiente página">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Enfoques básicos de vectorización</p>
+        <p class="prev-next-title">Bag of Words</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
