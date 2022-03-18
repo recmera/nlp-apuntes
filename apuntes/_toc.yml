@@ -4,14 +4,14 @@ options:
   numbered: True
 
 parts:
-  - caption: I. Introducción a NLP
+  - caption: Introducción a NLP
     chapters:
     - file: chapters/01-introduccion/01-intro
     - file: chapters/01-introduccion/02-lenguaje
     - file: chapters/01-introduccion/03-ml-dl-nlp
     - file: chapters/01-introduccion/04-nlp
     
-  - caption: II. Pipelines de procesamiento 
+  - caption: Pipelines de procesamiento 
     chapters:
     - file: chapters/02-pipeline/01-data-adquisition
     - file: chapters/02-pipeline/02-text-extraction-cleanup
@@ -19,24 +19,17 @@ parts:
     - file: chapters/02-pipeline/04-feature-engineering
     - file: chapters/02-pipeline/05-modeling-evaluation
 
-  - caption: III. Representaciones del texto
+  - caption: Representaciones del texto
     chapters:
     - file: chapters/03-representacion-texto/01-vector-space-models
+      sections:
+      - file: chapters/03-representacion-texto/01z1-bag-of-words
     - file: chapters/03-representacion-texto/02-vectorization-approaches
-    - file: chapters/03-representacion-texto/03-distributed-representations
-    - file: chapters/03-representacion-texto/04-universal-text-representations
-    - file: chapters/03-representacion-texto/05-visualizing-embeddings
-    - file: chapters/03-representacion-texto/06-hancrafted-representations
+    - file: chapters/03-representacion-texto/01-distributed-representations
+    - file: chapters/03-representacion-texto/01-universal-text-representations
+    - file: chapters/03-representacion-texto/01-visualizing-embeddings
+    - file: chapters/03-representacion-texto/01-handcrafted-representations
 
-  - caption: IV. Clasificación de texto
-    chapters:
-    - file: chapters/04-clasificacion-texto/01-aplicaciones
-    - file: chapters/04-clasificacion-texto/02-textclassification-pipeline
-    - file: chapters/04-clasificacion-texto/03-one-many
-    - file: chapters/04-clasificacion-texto/04-neural-embeddings
-    - file: chapters/04-clasificacion-texto/05-Deep-learning
-    - file: chapters/04-clasificacion-texto/06-interpretating-models
-    - file: chapters/04-clasificacion-texto/07-aprendizaje-pocos-datos
 
 
 
