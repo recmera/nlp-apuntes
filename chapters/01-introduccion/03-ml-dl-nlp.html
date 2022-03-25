@@ -318,7 +318,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#hidden-markov-model-hmm">
-       - Hidden Markov Model (HMM)
+       - Hidden Márkov Model (HMM)
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -409,7 +409,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#hidden-markov-model-hmm">
-       - Hidden Markov Model (HMM)
+       - Hidden Márkov Model (HMM)
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -499,16 +499,21 @@ Al igual que en la inteligencia artificial, los primeros avances de NLP eran bas
 <section id="naive-bayes">
 <h4>- Naive Bayes<a class="headerlink" href="#naive-bayes" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Naive Bayes es un algoritmo clásico para las tareas de clasificación que principalmente se basa en el <a class="reference external" href="https://en.wikipedia.org/wiki/Bayes%27_theorem"><em>teorema de bayes</em></a>. Usando el teorema de bayes se calcula la probabilidad de observar una categoría dado cierto input y las características de los datos. Una particularidad de este algoritmo es que asume que cada característica es independiente de las demás categorías. Por ejemplo, un modelo naive bayes clasificador de noticias puede representar el texto de forma numérica usando un contador de palabras clave por clase, palabras que son específicas para la clase deportes, política, arte, etc. y que están presentes en el texto. Se asume que estos contadores de palabras no están correlacionados con las demás categorías, y aunque esta asumpción es bastante fuerte, en algunos casos (poco probables) puede arrojar falsos positivos.</p>
-<a class="reference internal image-reference" href="https://miro.medium.com/max/1200/0*Z3nK2E6TghNWzZGz.png"><img alt="https://miro.medium.com/max/1200/0*Z3nK2E6TghNWzZGz.png" src="https://miro.medium.com/max/1200/0*Z3nK2E6TghNWzZGz.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="https://miro.medium.com/max/1200/0*Z3nK2E6TghNWzZGz.png"><img alt="https://miro.medium.com/max/1200/0*Z3nK2E6TghNWzZGz.png" src="https://miro.medium.com/max/1200/0*Z3nK2E6TghNWzZGz.png" style="width: 400px;" /></a>
 </section>
 <section id="support-vector-machine-svm">
 <h4>- Support Vector Machine (SVM)<a class="headerlink" href="#support-vector-machine-svm" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Support Vector Machine es otro algoritmo de clasificación popular. El objetivo en cualquier técnica de clasificación es aprender los límites que actúan como separadores entre las distintas clases o categorías de texto (por ejemplo, política versus deportes, en nuestro ejemplo de clasificación de noticias). Estos límites de decisión pueden ser lineales o no lineales. SVM puede aprender límites de decisión lineales o no lineales para separar los datos pertenecientes a las distintas clases.</p>
 <p>Una SVM puede aprender un límite de decisión óptimo para que la distancia entre los puntos de las clases sea máxima. La mayor fortaleza de las SVM es su solidez a la variación y el ruido en los datos. Una debilidad importante es el tiempo que se tarda en entrenar y la incapacidad de escalar cuando hay grandes cantidades de datos de entrenamiento.</p>
-<a class="reference internal image-reference" href="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2F1471-2105-8-S7-S18/MediaObjects/12859_2007_Article_1949_Fig1_HTML.jpg"><img alt="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2F1471-2105-8-S7-S18/MediaObjects/12859_2007_Article_1949_Fig1_HTML.jpg" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2F1471-2105-8-S7-S18/MediaObjects/12859_2007_Article_1949_Fig1_HTML.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0111.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0111.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0111.png" style="width: 300px;" /></a>
 </section>
 <section id="hidden-markov-model-hmm">
-<h4>- Hidden Markov Model (HMM)<a class="headerlink" href="#hidden-markov-model-hmm" title="Enlazar permanentemente con este título">¶</a></h4>
+<h4>- Hidden Márkov Model (HMM)<a class="headerlink" href="#hidden-markov-model-hmm" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Hidden Markov Model (modelo oculto de Márkov o HMM) es un modelo estadístico que asume que hay un subyacente e inobservable proceso con estados ocultos que generan los datos, donde sólo se pueden observar los datos cuando son generados. Un HMM entonces intenta modelar los estados ocultos desde estos datos.</p>
+<p>Por ejemplo, considera la tarea de reconocer el tipo de entidad de cierta palabra en una oración, ya sea verbo, pronombre, adjetivo, etc., esto se conoce como <em>Part-of-speech (POS) tagging</em>. HMMs es utilizado para reconocer estos tags en las palabras porque sabemos que detrás de cada palabra hay una gramática subyacente que está escondida y le da la lógica al texto. Los estados escondidos en este caso definen la estructura de la oración seguidos de la gramática del lenguaje, pero nosotros como observadores sólo somos capaces de ver las palabras que son governadas por estos estados latentes.<br />
+Además de esto, HMM también hace la suposición de Márkov, lo que significa que cada estado oculto depende de el o los estados anteriores. El lenguaje humano es secuencial en naturaleza, y una palabra actual en una oración depende de lo que haya ocurrido antes de ella. Por esto, HMMs con estas dos asumpciones son una poderosa herramienta para modelar datos textuales.</p>
+<img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0112.png" width="500" />
+La imagen muestra una HMM que aprende los tags del POS. En este caso, JJ(adjetive) y NN (noun) son estados ocultos, mientras que "natural language processing (nlp) ..." son directamente observables.
 </section>
 <section id="conditional-random-fields">
 <h4>- Conditional Random Fields<a class="headerlink" href="#conditional-random-fields" title="Enlazar permanentemente con este título">¶</a></h4>
@@ -518,18 +523,24 @@ Al igual que en la inteligencia artificial, los primeros avances de NLP eran bas
 <h3>3. basado en Deep Learning<a class="headerlink" href="#basado-en-deep-learning" title="Enlazar permanentemente con este título">¶</a></h3>
 <section id="recurrent-neural-networks">
 <h4>- Recurrent Neural Networks<a class="headerlink" href="#recurrent-neural-networks" title="Enlazar permanentemente con este título">¶</a></h4>
+<a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0113.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0113.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0113.png" style="width: 500px;" /></a>
 </section>
 <section id="long-short-term-memory">
 <h4>- Long Short-term memory<a class="headerlink" href="#long-short-term-memory" title="Enlazar permanentemente con este título">¶</a></h4>
+<a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0114.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0114.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0114.png" style="width: 500px;" /></a>
 </section>
 <section id="convolutional-neural-networks">
 <h4>- Convolutional neural networks<a class="headerlink" href="#convolutional-neural-networks" title="Enlazar permanentemente con este título">¶</a></h4>
+<p><a class="reference internal" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0115.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0115.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0115.png" style="width: 500px;" /></a></p>
 </section>
 <section id="transformers">
 <h4>- Transformers<a class="headerlink" href="#transformers" title="Enlazar permanentemente con este título">¶</a></h4>
+<p><a class="reference internal" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0116.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0116.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0116.png" style="width: 500px;" /></a>
+<a class="reference internal" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0117.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0117.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0117.png" style="width: 500px;" /></a></p>
 </section>
 <section id="autoencoders">
 <h4>- Autoencoders<a class="headerlink" href="#autoencoders" title="Enlazar permanentemente con este título">¶</a></h4>
+<p><a class="reference internal" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0118.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0118.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0118.png" style="width: 500px;" /></a></p>
 </section>
 </section>
 </section>
