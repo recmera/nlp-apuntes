@@ -322,8 +322,8 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conditional-random-fields">
-       - Conditional Random Fields
+      <a class="reference internal nav-link" href="#conditional-random-fields-crf">
+       - Conditional Random Fields (CRF)
       </a>
      </li>
     </ul>
@@ -334,13 +334,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#recurrent-neural-networks">
-       - Recurrent Neural Networks
+      <a class="reference internal nav-link" href="#recurrent-neural-networks-rnn">
+       - Recurrent Neural Networks (RNN)
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#long-short-term-memory">
-       - Long Short-term memory
+      <a class="reference internal nav-link" href="#long-short-term-memory-lstm">
+       - Long short-term memory (LSTM)
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -413,8 +413,8 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conditional-random-fields">
-       - Conditional Random Fields
+      <a class="reference internal nav-link" href="#conditional-random-fields-crf">
+       - Conditional Random Fields (CRF)
       </a>
      </li>
     </ul>
@@ -425,13 +425,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#recurrent-neural-networks">
-       - Recurrent Neural Networks
+      <a class="reference internal nav-link" href="#recurrent-neural-networks-rnn">
+       - Recurrent Neural Networks (RNN)
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#long-short-term-memory">
-       - Long Short-term memory
+      <a class="reference internal nav-link" href="#long-short-term-memory-lstm">
+       - Long short-term memory (LSTM)
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -510,23 +510,33 @@ Al igual que en la inteligencia artificial, los primeros avances de NLP eran bas
 <section id="hidden-markov-model-hmm">
 <h4>- Hidden Márkov Model (HMM)<a class="headerlink" href="#hidden-markov-model-hmm" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Hidden Markov Model (modelo oculto de Márkov o HMM) es un modelo estadístico que asume que hay un subyacente e inobservable proceso con estados ocultos que generan los datos, donde sólo se pueden observar los datos cuando son generados. Un HMM entonces intenta modelar los estados ocultos desde estos datos.</p>
-<p>Por ejemplo, considera la tarea de reconocer el tipo de entidad de cierta palabra en una oración, ya sea verbo, pronombre, adjetivo, etc., esto se conoce como <em>Part-of-speech (POS) tagging</em>. HMMs es utilizado para reconocer estos tags en las palabras porque sabemos que detrás de cada palabra hay una gramática subyacente que está escondida y le da la lógica al texto. Los estados escondidos en este caso definen la estructura de la oración seguidos de la gramática del lenguaje, pero nosotros como observadores sólo somos capaces de ver las palabras que son governadas por estos estados latentes.<br />
+<p>Por ejemplo, considera la tarea de reconocer el tipo de entidad de cierta palabra en una oración, ya sea verbo, pronombre, adjetivo, etc., esto se conoce como <em>Part-of-speech (POS) tagging</em>. HMMs es utilizado para reconocer estos tags en las palabras porque sabemos que detrás de cada palabra hay una gramática subyacente que está escondida y le da la lógica al texto. Los estados escondidos en este caso definen la estructura de la oración seguidos de la gramática del lenguaje, pero nosotros como observadores sólo somos capaces de ver las palabras que son gobernadas por estos estados latentes.<br />
 Además de esto, HMM también hace la suposición de Márkov, lo que significa que cada estado oculto depende de el o los estados anteriores. El lenguaje humano es secuencial en naturaleza, y una palabra actual en una oración depende de lo que haya ocurrido antes de ella. Por esto, HMMs con estas dos asumpciones son una poderosa herramienta para modelar datos textuales.</p>
 <a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0112.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0112.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0112.png" style="width: 500px;" /></a>
 <p>La imagen muestra una HMM que aprende los tags del POS. En este caso, JJ(adjetive) y NN (noun) son estados ocultos, mientras que “natural language processing (nlp) …” son directamente observables.</p>
 </section>
-<section id="conditional-random-fields">
-<h4>- Conditional Random Fields<a class="headerlink" href="#conditional-random-fields" title="Enlazar permanentemente con este título">¶</a></h4>
+<section id="conditional-random-fields-crf">
+<h4>- Conditional Random Fields (CRF)<a class="headerlink" href="#conditional-random-fields-crf" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Conditional random field (campo aleatorio condicional o CRF) es otro algorimo usado para datos secuenciales. Conceptualmente, CRF realiza una tarea de clasificación en cada elemento de la secuencia. Imagine el mismo ejemplo de POS tagging, donde un CRF puede etiquetar palabra por palabra clasificándolas en una clase del grupo de todos los tags de POS.</p>
+<p>Dado que tiene en cuenta el input secuencial y el contexto de los tags, se vuelve más expresivo que los métodos de clasificación habituales y, en general, funciona mejor. Los CRF superan a los HMM en tareas como el POS tagging, que se basan en la naturaleza secuencial del lenguaje.</p>
 </section>
 </section>
 <section id="basado-en-deep-learning">
 <h3>3. basado en Deep Learning<a class="headerlink" href="#basado-en-deep-learning" title="Enlazar permanentemente con este título">¶</a></h3>
-<section id="recurrent-neural-networks">
-<h4>- Recurrent Neural Networks<a class="headerlink" href="#recurrent-neural-networks" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>En los últimos años, se ha visto un surgimiento incrementado en el uso de redes neuronales que tratan con datos complejos y no estructurados. El lenguaje es inherentemente complejo y no estructurado. De esta forma, es necesario de modelos con mejores representaciones y capacidad de aprendizaje para entender y resolver tareas del lenguaje.</p>
+<p>Las siguientes son las arquitecturas de redes neuronales profundas que se han vuelto el status quo en NLP.</p>
+<section id="recurrent-neural-networks-rnn">
+<h4>- Recurrent Neural Networks (RNN)<a class="headerlink" href="#recurrent-neural-networks-rnn" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El lenguaje es inherentemente secuencial. Una oración en cualquier lenguaje fluye desde una dirección a otra (por ejemplo, en inglés o español se lee desde izquierda a derecha). Por lo tanto, un modelo que pueda leer progresivamente un input de texto desde un extremo a otro puede ser muy útil para el entendimiento del lenguaje. Las redes neuronales recurrentes (RNNs) están especialmente diseñadas para mantener este procesamiento secuencial y aprendizaje en mente. RNNs tienen unidades neuronales que son capaces de recordar lo que han procesado hasta ahora. Esta memoria es temporal, y la información es almacenada y actualizada con cada paso mientras RNN lee la siguiente palabra del input.</p>
+<p>La siguiente imagen ilustra una RNN desenrollada y como esta sigue la pista de sus inputs en distintos momentos.</p>
 <a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0113.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0113.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0113.png" style="width: 500px;" /></a>
+<p>Las RNN son muy poderosas y trabajan muy bien resolviendo problemas de NLP, como la clasificación de texto, reconocimiento de entidades nombradas (<em>named entity recognition</em> o NER), traducción automática, etc. También es posible generar texto con RNNs donde el objetivo es leer el texto que precede y predecir la palabra siguiente o el siguiente caracter.</p>
 </section>
-<section id="long-short-term-memory">
-<h4>- Long Short-term memory<a class="headerlink" href="#long-short-term-memory" title="Enlazar permanentemente con este título">¶</a></h4>
+<section id="long-short-term-memory-lstm">
+<h4>- Long short-term memory (LSTM)<a class="headerlink" href="#long-short-term-memory-lstm" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>A pesar de su capacidad y versatilidad, RNNs sufren el problema de la “pérdida de memoria”, estas no pueden recordad largos contextos, y por lo tanto, no son eficientes cuando el input es grande, situación que típicamente es el caso con los inputs de texto. Long short-term memory networks (LSTMs), un tipo de RNN, fueron inventadas para mitigar este defecto de las RNNs.</p>
+<p>LSTM sortea este problema dejando de lado el contexto irrelevante y recordando solo la parte del contexto que se necesita para resolver la tarea en cuestión. Esto alivia la carga de recordar un contexto muy largo en una representación vectorial. Los LSTM han reemplazado a los RNN en la mayoría de las aplicaciones debido a esta solución.</p>
+<p>La siguiente figura ilustra la arquitectura de una sola celda LSTM</p>
 <a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0114.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0114.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0114.png" style="width: 500px;" /></a>
 </section>
 <section id="convolutional-neural-networks">
