@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Feature engineering y extracción de características &#8212; Mi aprendizaje sobre NLP</title>
+    <title>4. Feature engineering y extracción de características &#8212; Mi aprendizaje sobre NLP</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -56,8 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Modelamiento y evaluación del pipeline" href="05-modeling-evaluation.html" />
-    <link rel="prev" title="Pre-procesamiento" href="03-preprocesamiento.html" />
+    <link rel="next" title="5. Modelamiento" href="05-modeling.html" />
+    <link rel="prev" title="3. Pre-procesamiento" href="03-preprocessing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="es">
     
@@ -113,18 +113,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-introduccion/02-lenguaje.html">
+  <a class="reference internal" href="../01-introduccion/02-language.html">
    ¿Qué es el lenguaje?
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../01-introduccion/03-ml-dl-nlp.html">
    Machine learning, Deep Learning y NLP
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-introduccion/04-nlp.html">
-   Acercamientos a NLP
   </a>
  </li>
 </ul>
@@ -135,28 +130,48 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="00-pipeline.html">
+   ¿Qué es Pipeline?
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="01-data-adquisition.html">
-   Adquisición de datos
+   1. Adquisición de datos
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02-text-extraction-cleanup.html">
-   Extracción y limpieza de textos
+   2. Extracción y limpieza de textos
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-preprocesamiento.html">
-   Pre-procesamiento
+  <a class="reference internal" href="03-preprocessing.html">
+   3. Pre-procesamiento
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Feature engineering y extracción de características
+   4. Feature engineering y extracción de características
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05-modeling-evaluation.html">
-   Modelamiento y evaluación del pipeline
+  <a class="reference internal" href="05-modeling.html">
+   5. Modelamiento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-evaluation.html">
+   6. Evaluación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-deployment.html">
+   7. Despliegue
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-monitoring.html">
+   8. Monitoreo y actualización del modelo
   </a>
  </li>
 </ul>
@@ -294,7 +309,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Feature engineering y extracción de características</h1>
+                <h1>4. Feature engineering y extracción de características</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -306,7 +321,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="feature-engineering-y-extraccion-de-caracteristicas">
-<h1>Feature engineering y extracción de características<a class="headerlink" href="#feature-engineering-y-extraccion-de-caracteristicas" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>4. Feature engineering y extracción de características<a class="headerlink" href="#feature-engineering-y-extraccion-de-caracteristicas" title="Enlazar permanentemente con este título">¶</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -334,17 +349,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="03-preprocesamiento.html" title="anterior página">
+    <a class='left-prev' id="prev-link" href="03-preprocessing.html" title="anterior página">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">anterior</p>
-            <p class="prev-next-title">Pre-procesamiento</p>
+            <p class="prev-next-title">3. Pre-procesamiento</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="05-modeling-evaluation.html" title="siguiente página">
+    <a class='right-next' id="next-link" href="05-modeling.html" title="siguiente página">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Modelamiento y evaluación del pipeline</p>
+        <p class="prev-next-title">5. Modelamiento</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

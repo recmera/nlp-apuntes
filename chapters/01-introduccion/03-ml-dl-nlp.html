@@ -56,8 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Acercamientos a NLP" href="04-nlp.html" />
-    <link rel="prev" title="¿Qué es el lenguaje?" href="02-lenguaje.html" />
+    <link rel="next" title="¿Qué es Pipeline?" href="../02-pipeline/00-pipeline.html" />
+    <link rel="prev" title="¿Qué es el lenguaje?" href="02-language.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="es">
     
@@ -113,18 +113,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02-lenguaje.html">
+  <a class="reference internal" href="02-language.html">
    ¿Qué es el lenguaje?
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Machine learning, Deep Learning y NLP
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04-nlp.html">
-   Acercamientos a NLP
   </a>
  </li>
 </ul>
@@ -135,28 +130,48 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../02-pipeline/00-pipeline.html">
+   ¿Qué es Pipeline?
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../02-pipeline/01-data-adquisition.html">
-   Adquisición de datos
+   1. Adquisición de datos
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../02-pipeline/02-text-extraction-cleanup.html">
-   Extracción y limpieza de textos
+   2. Extracción y limpieza de textos
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-pipeline/03-preprocesamiento.html">
-   Pre-procesamiento
+  <a class="reference internal" href="../02-pipeline/03-preprocessing.html">
+   3. Pre-procesamiento
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../02-pipeline/04-feature-engineering.html">
-   Feature engineering y extracción de características
+   4. Feature engineering y extracción de características
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-pipeline/05-modeling-evaluation.html">
-   Modelamiento y evaluación del pipeline
+  <a class="reference internal" href="../02-pipeline/05-modeling.html">
+   5. Modelamiento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-pipeline/06-evaluation.html">
+   6. Evaluación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-pipeline/07-deployment.html">
+   7. Despliegue
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-pipeline/08-monitoring.html">
+   8. Monitoreo y actualización del modelo
   </a>
  </li>
 </ul>
@@ -361,6 +376,48 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desventajas-de-los-modelos-de-deep-learning">
+     Desventajas de los modelos de Deep Learning
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sobreajuste-en-pequenos-datasets-overfitting">
+       - Sobreajuste en pequeños datasets (Overfitting)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aprendizaje-de-pocas-tomas-y-generacion-de-datos-sinteticos">
+       - Aprendizaje de pocas tomas y generación de datos sintéticos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#adaptacion-de-dominio">
+       - Adaptación de dominio
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelos-interpretables">
+       - Modelos interpretables.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sentido-comun-y-conocimiento-del-mundo">
+       - Sentido común y conocimiento del mundo.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#coste">
+       - Coste
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#implementacion-en-el-dispositivo">
+       - Implementación en el dispositivo
+      </a>
+     </li>
+    </ul>
+   </li>
   </ul>
  </li>
 </ul>
@@ -448,6 +505,48 @@ const thebe_selector_output = ".output, .cell_output"
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#autoencoders">
        - Autoencoders
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desventajas-de-los-modelos-de-deep-learning">
+     Desventajas de los modelos de Deep Learning
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sobreajuste-en-pequenos-datasets-overfitting">
+       - Sobreajuste en pequeños datasets (Overfitting)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aprendizaje-de-pocas-tomas-y-generacion-de-datos-sinteticos">
+       - Aprendizaje de pocas tomas y generación de datos sintéticos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#adaptacion-de-dominio">
+       - Adaptación de dominio
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelos-interpretables">
+       - Modelos interpretables.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sentido-comun-y-conocimiento-del-mundo">
+       - Sentido común y conocimiento del mundo.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#coste">
+       - Coste
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#implementacion-en-el-dispositivo">
+       - Implementación en el dispositivo
       </a>
      </li>
     </ul>
@@ -581,29 +680,61 @@ Además de esto, HMM también hace la suposición de Márkov, lo que significa q
 <h4>- Transformers<a class="headerlink" href="#transformers" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Los Transformers son la última gran innovación en NLP. Los modelos de transformers modelan el contexto textual pero no de manera secuencial. Dada una palabra de input, prefiere mirar todas las palabras a su alrededor (lo que se conoce como <strong>autoatención</strong> (<em>self-attention</em>)) y representar cada palabra con respecto a su contexto. Por ejemplo, la palabra “banco” puede tener diferentes significados según el contexto en el que aparezca. Si el contexto habla de finanzas, entonces “banco” probablemente denota una institución financiera.
 Por otro lado, si el contexto menciona un río, entonces probablemente indica una orilla del río (river banks es orilla de río en inglés).</p>
-<p>Los transformadores pueden modelar dicho contexto y, por lo tanto, se han utilizado mucho en tareas de NLP debido a esta mayor capacidad de representación en comparación con otras redes profundas.</p>
-<p>Últimamente, se han estado usando transformers que han sido alimentados por millones de datos para hacer <a class="reference external" href="https://en.wikipedia.org/wiki/Transfer_learning"><em>transfer learning</em></a>. Transfer learning es una técnica en inteligencia artificial que busca transferir el conocimiento adquirido por un modelo que resuelve un problema específico a otros problemas diferentes, y que están de cierta forma relacionados con el problema raíz. La idea en este caso</p>
+<p>Los transformers pueden modelar dicho contexto y, por lo tanto, se han utilizado mucho en tareas de NLP debido a esta mayor capacidad de representación en comparación con otras redes profundas.</p>
+<p>Últimamente, se han estado usando transformers que han sido alimentados por millones de datos para hacer <a class="reference external" href="https://en.wikipedia.org/wiki/Transfer_learning"><em>transfer learning</em></a>. Transfer learning es una técnica en inteligencia artificial que busca transferir el conocimiento adquirido por un modelo que resuelve un problema específico a otros problemas diferentes, y que están de cierta forma relacionados con el problema raíz. La idea en este caso es entrenar un transformer alimentado con muchos datos de forma no supervisada para que prediga una parte de una oración dado cierto contexto para que pueda codificar los matices de alto nivel del lenguaje en él. Generalmente, estos modelos son entrenados con más de 40Gb de datos textuales que son scrapeados desde la internet.</p>
+<p>Un ejemplo de transformers robustos sería BERT (<em>bidirectional encoder representations from transformers</em>).</p>
 <p></br></br></br></p>
 <center>
     <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0116.png
 " width="500" />
 </center>
-</br></br></br>
-<p>asdad</p>
+</br> 
+<p><em>La figura muestra la arquitectura de BERT: Pre-entrenada por Google y creada para resolver tareas de Question Answering</em>.</p>
+</br>
+En la parte izquierda se aprecia un modelo pre-entrenado. Luego, este modelo se ajusta con precisión en las tareas posteriores de NLP, como la clasificación de texto, la extracción de entidades, la respuesta a preguntas, etc., como se muestra en el lado derecho. Debido a la gran cantidad de conocimientos formados previamente, BERT funciona de manera eficiente en la transferencia de conocimientos para tareas posteriores y logra el estado del arte para muchas de estas tareas.
 <p></br></br></br></p>
 <center>
     <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0117.png
 " width="400" />
 </center>
-</br></br></br>
+</br>
+<p><em>La figura muestra el mecanismo de auto-atención (self-attention) en un transformer</em>.</p>
 </section>
 <section id="autoencoders">
 <h4>- Autoencoders<a class="headerlink" href="#autoencoders" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Un Autoencoder (<em>codificador automático</em>) es un tipo diferente de red que se usa principalmente para aprender la representación vectorial comprimida del input. Por ejemplo, si queremos representar un texto mediante un vector, ¿cuál es una buena forma de hacerlo? Podemos aprender una función de mapeo del texto de entrada al vector. Para que esta función de mapeo sea útil, “reconstruimos” la entrada a partir de la representación vectorial. Esta es una forma de aprendizaje no supervisado ya que no necesita labels etiquetadas por humanos para ello. Después del entrenamiento, recopilamos la representación vectorial, que sirve como codificación del texto de entrada como un vector denso. Los autoencoders generalmente se usan para crear representaciones de características necesarias para cualquier tarea posterior.</p>
 <p></br></br></br></p>
 <center>
     <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0118.png
 " width="500" />
-</center></section>
+</center>
+<p><em>La figura muestra la arquitectura estándar de un Autoencoder</em>.</p>
+<p>En esta figura, la capa oculta brinda una representación comprimida de los datos de entrada, capturando la esencia, y la capa de salida (decoder) reconstruye la representación de entrada a partir de la representación comprimida. Si bien la arquitectura del autoencoder que se muestra no puede manejar propiedades específicas de datos secuenciales como el texto, algunas variaciones de estos, como los autoencoders LSTM, los abordan bien.</p>
+</section>
+</section>
+<section id="desventajas-de-los-modelos-de-deep-learning">
+<h3>Desventajas de los modelos de Deep Learning<a class="headerlink" href="#desventajas-de-los-modelos-de-deep-learning" title="Enlazar permanentemente con este título">¶</a></h3>
+<section id="sobreajuste-en-pequenos-datasets-overfitting">
+<h4>- Sobreajuste en pequeños datasets (Overfitting)<a class="headerlink" href="#sobreajuste-en-pequenos-datasets-overfitting" title="Enlazar permanentemente con este título">¶</a></h4>
+</section>
+<section id="aprendizaje-de-pocas-tomas-y-generacion-de-datos-sinteticos">
+<h4>- Aprendizaje de pocas tomas y generación de datos sintéticos<a class="headerlink" href="#aprendizaje-de-pocas-tomas-y-generacion-de-datos-sinteticos" title="Enlazar permanentemente con este título">¶</a></h4>
+</section>
+<section id="adaptacion-de-dominio">
+<h4>- Adaptación de dominio<a class="headerlink" href="#adaptacion-de-dominio" title="Enlazar permanentemente con este título">¶</a></h4>
+</section>
+<section id="modelos-interpretables">
+<h4>- Modelos interpretables.<a class="headerlink" href="#modelos-interpretables" title="Enlazar permanentemente con este título">¶</a></h4>
+</section>
+<section id="sentido-comun-y-conocimiento-del-mundo">
+<h4>- Sentido común y conocimiento del mundo.<a class="headerlink" href="#sentido-comun-y-conocimiento-del-mundo" title="Enlazar permanentemente con este título">¶</a></h4>
+</section>
+<section id="coste">
+<h4>- Coste<a class="headerlink" href="#coste" title="Enlazar permanentemente con este título">¶</a></h4>
+</section>
+<section id="implementacion-en-el-dispositivo">
+<h4>- Implementación en el dispositivo<a class="headerlink" href="#implementacion-en-el-dispositivo" title="Enlazar permanentemente con este título">¶</a></h4>
+</section>
 </section>
 </section>
 </section>
@@ -633,17 +764,17 @@ Por otro lado, si el contexto menciona un río, entonces probablemente indica un
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="02-lenguaje.html" title="anterior página">
+    <a class='left-prev' id="prev-link" href="02-language.html" title="anterior página">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">anterior</p>
             <p class="prev-next-title">¿Qué es el lenguaje?</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="04-nlp.html" title="siguiente página">
+    <a class='right-next' id="next-link" href="../02-pipeline/00-pipeline.html" title="siguiente página">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Acercamientos a NLP</p>
+        <p class="prev-next-title">¿Qué es Pipeline?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

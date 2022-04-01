@@ -122,11 +122,6 @@ const thebe_selector_output = ".output, .cell_output"
    Machine learning, Deep Learning y NLP
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04-nlp.html">
-   Acercamientos a NLP
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -135,28 +130,48 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../02-pipeline/00-pipeline.html">
+   ¿Qué es Pipeline?
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../02-pipeline/01-data-adquisition.html">
-   Adquisición de datos
+   1. Adquisición de datos
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../02-pipeline/02-text-extraction-cleanup.html">
-   Extracción y limpieza de textos
+   2. Extracción y limpieza de textos
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-pipeline/03-preprocesamiento.html">
-   Pre-procesamiento
+  <a class="reference internal" href="../02-pipeline/03-preprocessing.html">
+   3. Pre-procesamiento
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../02-pipeline/04-feature-engineering.html">
-   Feature engineering y extracción de características
+   4. Feature engineering y extracción de características
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-pipeline/05-modeling-evaluation.html">
-   Modelamiento y evaluación del pipeline
+  <a class="reference internal" href="../02-pipeline/05-modeling.html">
+   5. Modelamiento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-pipeline/06-evaluation.html">
+   6. Evaluación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-pipeline/07-deployment.html">
+   7. Despliegue
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-pipeline/08-monitoring.html">
+   8. Monitoreo y actualización del modelo
   </a>
  </li>
 </ul>
@@ -229,7 +244,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/chapters/01-introduccion/02-lenguaje.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/chapters/01-introduccion/02-language.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -249,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
                     class="fab fa-github"></i>repositorio</button></a>
         <a class="issues-button"
-            href="https://github.com/rickiwasho/nlp-apuntes/issues/new?title=Issue%20on%20page%20%2Fchapters/01-introduccion/02-lenguaje.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rickiwasho/nlp-apuntes/issues/new?title=Issue%20on%20page%20%2Fchapters/01-introduccion/02-language.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
         
@@ -270,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rickiwasho/nlp-apuntes/master?urlpath=tree/docs/chapters/01-introduccion/02-lenguaje.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rickiwasho/nlp-apuntes/master?urlpath=tree/docs/chapters/01-introduccion/02-language.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -388,34 +403,42 @@ const thebe_selector_output = ".output, .cell_output"
   <section id="que-es-el-lenguaje">
 <h1>¿Qué es el lenguaje?<a class="headerlink" href="#que-es-el-lenguaje" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>El lenguaje es un sistema estructurado de comunicación que involucra combinaciones complejas de sus componentes constituyentes, tales como caracteres, palabras, oraciones, etc. La lingüística es el estudio sistemático del lenguaje. Para estudiar NLP es importante entender algunos conceptos lingüísticos sobre cómo el lenguaje está estructurado.</p>
-<p>Podemos pensar en el lenguaje humano como un compuesto de cuatro grandes componentes: <strong>fonemas, morfemas y lexemas, sintaxis</strong>, y finalmente, <strong>contexto</strong>. Las aplicaciones de NLP necesitan conocer los diferentes niveles de estos componentes básicos, desde los sonidos básicos del lenguaje (fonemas) hasta el texto con algunas expresiones significativas (contexto).</p>
+<p>Podemos pensar en el lenguaje humano como un compuesto de cuatro grandes componentes: <strong>fonemas, morfemas y lexemas, sintaxis</strong>, y finalmente, <strong>contexto</strong>. Las aplicaciones de NLP necesitan conocer los diferentes niveles de estos componentes básicos, desde los sonidos básicos del lenguaje (fonemas) hasta el texto con algunas expresiones significativas (contexto).
+</br></br></br></p>
 <center>
     <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0103.png" width="400">
-</center></section>
+</center>
+</br></br></br></section>
 <section id="componentes-del-lenguaje">
 <h1>Componentes del lenguaje<a class="headerlink" href="#componentes-del-lenguaje" title="Enlazar permanentemente con este título">¶</a></h1>
 <section id="fonemas">
 <h2>Fonemas<a class="headerlink" href="#fonemas" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Los <em>fonemas</em> son las pequeñas unidades de sonido en el lenguaje. Estas pueden no tener ningún significado por si mismas pero pueden inducir significados cuando se pronuncia en combinación con otros fonemas. Por ejemplo, el inglés estándar tiene 44 fonemas, que son letras o combinaciones de letras.</p>
+<p>Los <em>fonemas</em> son las pequeñas unidades de sonido en el lenguaje. Estas pueden no tener ningún significado por si mismas pero pueden inducir significados cuando se pronuncia en combinación con otros fonemas. Por ejemplo, el inglés estándar tiene 44 fonemas, que son letras o combinaciones de letras.
+</br></br></br></p>
 <center>
     <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0104.png" width="500">
 </center>
+</br></br></br>
 <p>Los fonemas son importantes en las aplicaciones relacionadas con el entendimiento del habla, como por ejemplo, el reconocimiento del habla, transcripción habla a texto y conversión texto a habla.</p>
 </section>
 <section id="morfemas-y-lexemas">
 <h2>Morfemas y lexemas<a class="headerlink" href="#morfemas-y-lexemas" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Los <em>morfemas</em> son las pequeñas unidades del lenguaje que tienen significado. Están formadas por combinaciones de fonemas. No todos los morfemas son palabras, pero todos los prefijos y sufijos son morfemas. Por ejemplo, en la palabra “multimedia”, “multi-” no es una palabra sino que un prefijo que cambia el significado cuando se junta con “media”. “Multi-” es un morfema.</p>
+<p>Los <em>morfemas</em> son las pequeñas unidades del lenguaje que tienen significado. Están formadas por combinaciones de fonemas. No todos los morfemas son palabras, pero todos los prefijos y sufijos son morfemas. Por ejemplo, en la palabra “multimedia”, “multi-” no es una palabra sino que un prefijo que cambia el significado cuando se junta con “media”. “Multi-” es un morfema.
+</br></br></br></p>
 <center>
     <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0105.png" width="400">
 </center>
-<p>Los lexemas son variaciones estructurales de los morfemas relacionados entre sí por el significado. Por ejemplo, “run” y “running” pertenecen a la misma forma o familia de lexema. El análisis morfológico, que analiza la estructura de las palabras mediante el estudio de sus morfemas y lexemas, es un bloque fundamental de muchas tareas de NLP, como la ‘tokenization’, el aprendizaje de ‘word embeddings’ y el ‘tagging’ de partes del discurso (part-of-speech tagging).</p>
+</br></br></br>
+Los lexemas son variaciones estructurales de los morfemas relacionados entre sí por el significado. Por ejemplo, "run" y "running" pertenecen a la misma forma o familia de lexema. El análisis morfológico, que analiza la estructura de las palabras mediante el estudio de sus morfemas y lexemas, es un bloque fundamental de muchas tareas de NLP, como la 'tokenization', el aprendizaje de 'word embeddings' y el 'tagging' de partes del discurso (part-of-speech tagging).
 </section>
 <section id="sintaxis">
 <h2>Sintaxis<a class="headerlink" href="#sintaxis" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>La sintaxis es un conjunto de reglas para construir oraciones gramaticalmente correctas a partir de palabras y frases en un lenguaje. En lingüística, la estructura sintáctica es representada de diferentes formas. Un común acercamiento es representar las oraciones como un árbol.</p>
+<p>La sintaxis es un conjunto de reglas para construir oraciones gramaticalmente correctas a partir de palabras y frases en un lenguaje. En lingüística, la estructura sintáctica es representada de diferentes formas. Un común acercamiento es representar las oraciones como un árbol.
+</br></br></br></p>
 <center>
     <img src="https://www.nltk.org/book/tree_images/ch08-tree-4.png" width="400">
-</center><p>La sintaxis entrega una estructura jerárquica al lenguaje, con palabras en el nivel más bajo, seguidas de etiquetas como verbos, pronombres, etc., seguidas de frases y terminando con una oración en el nivel más alto. <a class="reference external" href="https://en.wikipedia.org/wiki/Phrase_structure_rules">(Ver más…)</a></p>
+</center>
+</br></br></br><p>La sintaxis entrega una estructura jerárquica al lenguaje, con palabras en el nivel más bajo, seguidas de etiquetas como verbos, pronombres, etc., seguidas de frases y terminando con una oración en el nivel más alto. <a class="reference external" href="https://en.wikipedia.org/wiki/Phrase_structure_rules">(Ver más…)</a></p>
 <p>La sintaxis de un lenguaje puede ser muy diferente a la sintaxis de otro lenguaje. A su vez, el acercamiento necesario para procesar un lenguaje es influenciado por su sintaxis.</p>
 </section>
 <section id="contexto">
