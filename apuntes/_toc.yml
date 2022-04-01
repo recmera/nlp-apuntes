@@ -7,7 +7,7 @@ parts:
   - caption: Introducción a NLP
     chapters:
     - file: chapters/01-introduccion/01-intro
-    - file: chapters/01-introduccion/02-lenguaje
+    - file: chapters/01-introduccion/02-language
     - file: chapters/01-introduccion/03-ml-dl-nlp
     - file: chapters/01-introduccion/04-nlp
     
@@ -16,9 +16,13 @@ parts:
     - file: chapters/02-pipeline/00-pipeline
     - file: chapters/02-pipeline/01-data-adquisition
     - file: chapters/02-pipeline/02-text-extraction-cleanup
-    - file: chapters/02-pipeline/03-preprocesamiento
+    - file: chapters/02-pipeline/03-preprocessing
     - file: chapters/02-pipeline/04-feature-engineering
-    - file: chapters/02-pipeline/05-modeling-evaluation
+    - file: chapters/02-pipeline/05-modeling
+    - file: chapters/02-pipeline/06-evaluation
+    - file: chapters/02-pipeline/07-deployment
+    - file: chapters/02-pipeline/08-monitoring
+
 
   - caption: Representaciones del texto
     chapters:
