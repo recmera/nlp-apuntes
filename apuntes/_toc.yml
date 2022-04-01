@@ -13,6 +13,7 @@ parts:
     
   - caption: Pipelines de procesamiento 
     chapters:
+    - file: chapters/02-pipeline/00-pipeline
     - file: chapters/02-pipeline/01-data-adquisition
     - file: chapters/02-pipeline/02-text-extraction-cleanup
     - file: chapters/02-pipeline/03-preprocesamiento
