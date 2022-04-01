@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -467,13 +468,17 @@ const thebe_selector_output = ".output, .cell_output"
 <p>La <strong>inteligencia artificial</strong> (AI) es una rama de las ciencias de la computación cuyo objetivo es construir sistemas que puedan desarrollar tareas que requieran de la inteligencia humana.</p>
 <p><strong>Machine learning</strong> (ML o aprendizaje de máquina) es una rama de la inteligencia artificial cuyo objetivo es desarrollar algoritmos que pueden aprender a desarrollar tareas de forma automática, basándose en un gran número de ejemplos.</p>
 <p><strong>Deep Learning</strong> (DL o aprendizaje profundo) es una rama de machine learning basada en arquitecturas de redes neuronales artificiales</p>
-<p>NLP, ML y DL pueden traslaparse, sin embargo, son áreas de estudio diferentes.<br />
-Al igual que en la inteligencia artificial, los primeros avances de NLP eran basados en reglas y heurísticas. Luego, con el paso de los años y los grandes avances en ML y DL, NLP fue adquiriendo parte de sus técnicas, modelos y arquitecturas.</p>
-<a class="reference internal image-reference" href="https://miro.medium.com/max/1400/1*TURvrYWSTRQLGF6sJ025gw.png"><img alt="https://miro.medium.com/max/1400/1*TURvrYWSTRQLGF6sJ025gw.png" src="https://miro.medium.com/max/1400/1*TURvrYWSTRQLGF6sJ025gw.png" style="width: 600px;" /></a>
+<p>NLP, ML y DL pueden traslaparse, sin embargo, son áreas de estudio diferentes.</p>
+<p>Al igual que en la inteligencia artificial, los primeros avances de NLP eran basados en reglas y heurísticas. Luego, con el paso de los años y los grandes avances en ML y DL, NLP fue adquiriendo parte de sus técnicas, modelos y arquitecturas.</p>
+<p></br></br></br></p>
+<center>
+    <img src="https://miro.medium.com/max/1400/1*TURvrYWSTRQLGF6sJ025gw.png" width="600"/>
+</center>
+</br></br></br>
 <p>El objetivo del machine learning es “aprender” a desarrollar tareas basándose en ejemplos (llamados “datos de entrenamiento”) sin instrucciones explícitas. Esto típicamente se realiza creando una representación numérica de los datos de entrenamiento y usando dicha representación para aprender los patrones implícitos.</p>
 <p>Los algoritmos de machine learning se pueden agrupar en tres paradigmas: <em>aprendizaje supervisado, aprendizaje no supervisado y aprendizaje por reforzamiento.</em></p>
 <ul class="simple">
-<li><p>En el <strong>aprendizaje supervisado</strong>, el objetivo es aprender la función de mapeo de entrada a salida dada una gran cantidad de ejemplos en forma de pares de entrada-salida. Los pares de entrada-salida se conocen como <em>datos de entrenamiento</em> y las salidas se conocen específicamente como <em>etiquetas</em>. Un ejemplo de un problema de aprendizaje supervisado relacionado con el lenguaje es aprender a clasificar los correos electrónicos como spam o no spam dados miles de ejemplos en ambas categorías. Este es un escenario común en la PNL.</p></li>
+<li><p>En el <strong>aprendizaje supervisado</strong>, el objetivo es aprender la función de mapeo de entrada a salida dada una gran cantidad de ejemplos en forma de pares de entrada-salida. Los pares de entrada-salida se conocen como <em>datos de entrenamiento</em> y las salidas se conocen específicamente como <em>etiquetas</em>. Un ejemplo de un problema de aprendizaje supervisado relacionado con el lenguaje es aprender a clasificar los correos electrónicos como spam o no spam dado miles de ejemplos en ambas categorías. Este es un escenario común en NLP.</p></li>
 <li><p>El <strong>aprendizaje no supervisado</strong> se refiere a un conjunto de métodos de machine learning que tienen como objetivo encontrar patrones ocultos en los datos de entrada sin ninguna salida de referencia. Es decir, en contraste con el aprendizaje supervisado, el aprendizaje no supervisado funciona con grandes colecciones de datos no etiquetados. En NLP, un ejemplo de tal tarea es identificar temas latentes en una gran colección de datos textuales sin ningún conocimiento de estos temas. Esto se conoce como <em>topic modeling</em> (modelado de temas).</p></li>
 <li><p>El <strong>aprendizaje por reforzamiento</strong> se ocupa de métodos para aprender tareas a través de prueba y error. Se caracteriza por la ausencia de datos etiquetados o no-etiquetados en grandes cantidades. El aprendizaje se realiza en un entorno autónomo y mejora a través de la retroalimentación (recompensa y castigo) facilitada por el entorno. Esta forma de aprendizaje no es común en la NLP (todavía). Es más común en aplicaciones como juegos (go, ajedrez, etc),  en el diseño de vehículos autónomos y en la robótica.</p></li>
 </ul>
@@ -482,8 +487,8 @@ Al igual que en la inteligencia artificial, los primeros avances de NLP eran bas
 <p>Los diferentes acercamientos usados para resolver problemas de NLP comúnmente caen en tres categorías: heurísticas, machine learning y deep learning.</p>
 <section id="basado-en-heuristicas">
 <h3>1. basado en heurísticas<a class="headerlink" href="#basado-en-heuristicas" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Similar a los primeros sistemas de inteligencia artificial, los primeros intentos para diseñar sistemas de NLP estuvieron basados en la construcción a mano de reglas para resolver problemas del lenguaje. Esto requeria que los desarrolladores tuvieran cierta expertiz en el dominio para formular reglas que pudieran ser incorporadas en un programa. Estos sistemas requerian recursos como diccionarios y diccionarios de sinónimos y antónimos (tesauros), típicamente compilados y digitalizados a través de ciertos periodos de tiempo. Un ejemplo de diseñar reglas para resolver un problema de NLP usando recursos es el “lexicon-based sentiment analysis” (o análisis de sentimientos basado en léxico). Utiliza contadores de palabras positivas y negativas en el texto para deducir el sentimiento del texto.</p>
-<p>Las <strong>expresiones regulares</strong> (Regex) son una buena herramienta para el análisis de textos y para la construcción de sistemas basados en reglas. Una expresión regular es un conjunto de caracteres o un patrón que se usa para encontrar substrings en el texto. Además son usadas para matches o coincidencias determinísticas -vale decir, es una coincidencia o no lo es. Las expresiones regulares probabilísticas son una rama secundaria que aborda esta limitanción al incluir una probabilidad de coincidencia.</p>
+<p>Similar a los primeros sistemas de inteligencia artificial, los primeros intentos para diseñar sistemas de NLP estuvieron basados en la construcción a mano de reglas para resolver problemas del lenguaje. Esto requeria que los desarrolladores tuvieran cierta expertiz en el dominio para formular reglas que pudieran ser incorporadas en un programa. Estos sistemas requerian recursos como diccionarios y tesauros (de forma simplificada, un tesauro es una especie de diccionario que linkea la palabra de interés con sus sinónimos), típicamente compilados y digitalizados a través de ciertos periodos de tiempo. Un ejemplo de diseñar reglas para resolver un problema de NLP usando recursos es el “lexicon-based sentiment analysis” (o análisis de sentimientos basado en léxico). Utiliza contadores de palabras positivas y negativas en el texto para deducir el sentimiento del texto.</p>
+<p>Las <strong>expresiones regulares</strong> (regex) son una buena herramienta para el análisis de textos y para la construcción de sistemas basados en reglas. Una expresión regular es un conjunto de caracteres o un patrón que se usa para encontrar substrings en el texto. Además son usadas para matches o coincidencias determinísticas -vale decir, es una coincidencia o no lo es. Las expresiones regulares probabilísticas son una rama secundaria que aborda esta limitanción al incluir una probabilidad de coincidencia.</p>
 <p>La <strong>gramática de libre contexto</strong> (Context-free grammar o CFG) es un tipo de gramática formal que es usado para modelar lenguajes naturales. CFG fue inventada por <a class="reference external" href="https://en.wikipedia.org/wiki/Noam_Chomsky"><em>Noam Chomsky</em></a> y permite capturar información más compleja y jerárquica, en situaciones donde posiblemente las expresiones regulares serían una herramienta incompatible.</p>
 <p>Las reglas y heurísticas juegan un rol importante en el ciclo de vida de los proyectos de NLP. Son una excelente forma de empezar a construir las primeras versiones de nuestros sistemas. Con tan solo un par de reglas y heurísticas puedes construir un modelo simple que te permitirá entender de mejor forma el problema.</p>
 </section>
@@ -498,26 +503,39 @@ Al igual que en la inteligencia artificial, los primeros avances de NLP eran bas
 </ol>
 <section id="naive-bayes">
 <h4>- Naive Bayes<a class="headerlink" href="#naive-bayes" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>Naive Bayes es un algoritmo clásico para las tareas de clasificación que principalmente se basa en el <a class="reference external" href="https://en.wikipedia.org/wiki/Bayes%27_theorem"><em>teorema de bayes</em></a>. Usando el teorema de bayes se calcula la probabilidad de observar una categoría dado cierto input y las características de los datos. Una particularidad de este algoritmo es que asume que cada característica es independiente de las demás categorías. Por ejemplo, un modelo naive bayes clasificador de noticias puede representar el texto de forma numérica usando un contador de palabras clave por clase, palabras que son específicas para la clase deportes, política, arte, etc. y que están presentes en el texto. Se asume que estos contadores de palabras no están correlacionados con las demás categorías, y aunque esta asumpción es bastante fuerte, en algunos casos (poco probables) puede arrojar falsos positivos.</p>
-<a class="reference internal image-reference" href="https://miro.medium.com/max/1200/0*Z3nK2E6TghNWzZGz.png"><img alt="https://miro.medium.com/max/1200/0*Z3nK2E6TghNWzZGz.png" src="https://miro.medium.com/max/1200/0*Z3nK2E6TghNWzZGz.png" style="width: 400px;" /></a>
+<p>Naive Bayes es un algoritmo clásico para las tareas de clasificación que principalmente se basa en el <a class="reference external" href="https://en.wikipedia.org/wiki/Bayes%27_theorem"><em>teorema de bayes</em></a>.</p>
+<p>Usando el teorema de bayes se calcula la probabilidad de observar una categoría dado cierto input y las características de los datos. Una particularidad de este algoritmo es que asume que cada característica es independiente de las demás categorías. Por ejemplo, un modelo naive bayes clasificador de noticias puede representar el texto de forma numérica usando un contador de palabras clave por clase, palabras que son específicas para la clase deportes, política, arte, etc. y que están presentes en el texto. Se asume que estos contadores de palabras no están correlacionados con las demás categorías, y aunque esta asumpción es bastante fuerte, en algunos casos (poco probables) puede arrojar falsos positivos.</p>
+<p></br></br></br></p>
+<center>
+    <img src="https://miro.medium.com/max/1200/0*Z3nK2E6TghNWzZGz.png" width="400"/>
+</center>
+</br></br></br>
 </section>
 <section id="support-vector-machine-svm">
 <h4>- Support Vector Machine (SVM)<a class="headerlink" href="#support-vector-machine-svm" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Support Vector Machine es otro algoritmo de clasificación popular. El objetivo en cualquier técnica de clasificación es aprender los límites que actúan como separadores entre las distintas clases o categorías de texto (por ejemplo, política versus deportes, en nuestro ejemplo de clasificación de noticias). Estos límites de decisión pueden ser lineales o no lineales. SVM puede aprender límites de decisión lineales o no lineales para separar los datos pertenecientes a las distintas clases.</p>
 <p>Una SVM puede aprender un límite de decisión óptimo para que la distancia entre los puntos de las clases sea máxima. La mayor fortaleza de las SVM es su solidez a la variación y el ruido en los datos. Una debilidad importante es el tiempo que se tarda en entrenar y la incapacidad de escalar cuando hay grandes cantidades de datos de entrenamiento.</p>
-<a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0111.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0111.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0111.png" style="width: 300px;" /></a>
+<p></br></br></br></p>
+<center>
+    <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0111.png" width="300"/>
+</center>
+</br></br></br>
 </section>
 <section id="hidden-markov-model-hmm">
 <h4>- Hidden Márkov Model (HMM)<a class="headerlink" href="#hidden-markov-model-hmm" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Hidden Markov Model (modelo oculto de Márkov o HMM) es un modelo estadístico que asume que hay un subyacente e inobservable proceso con estados ocultos que generan los datos, donde sólo se pueden observar los datos cuando son generados. Un HMM entonces intenta modelar los estados ocultos desde estos datos.</p>
 <p>Por ejemplo, considera la tarea de reconocer el tipo de entidad de cierta palabra en una oración, ya sea verbo, pronombre, adjetivo, etc., esto se conoce como <em>Part-of-speech (POS) tagging</em>. HMMs es utilizado para reconocer estos tags en las palabras porque sabemos que detrás de cada palabra hay una gramática subyacente que está escondida y le da la lógica al texto. Los estados escondidos en este caso definen la estructura de la oración seguidos de la gramática del lenguaje, pero nosotros como observadores sólo somos capaces de ver las palabras que son gobernadas por estos estados latentes.<br />
 Además de esto, HMM también hace la suposición de Márkov, lo que significa que cada estado oculto depende de el o los estados anteriores. El lenguaje humano es secuencial en naturaleza, y una palabra actual en una oración depende de lo que haya ocurrido antes de ella. Por esto, HMMs con estas dos asumpciones son una poderosa herramienta para modelar datos textuales.</p>
-<a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0112.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0112.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0112.png" style="width: 500px;" /></a>
+<p></br></br></br></p>
+<center>
+    <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0112.png" width="500" />
+</center>
+</br></br></br>
 <p>La imagen muestra una HMM que aprende los tags del POS. En este caso, JJ(adjetive) y NN (noun) son estados ocultos, mientras que “natural language processing (nlp) …” son directamente observables.</p>
 </section>
 <section id="conditional-random-fields-crf">
 <h4>- Conditional Random Fields (CRF)<a class="headerlink" href="#conditional-random-fields-crf" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>Conditional random field (campo aleatorio condicional o CRF) es otro algorimo usado para datos secuenciales. Conceptualmente, CRF realiza una tarea de clasificación en cada elemento de la secuencia. Imagine el mismo ejemplo de POS tagging, donde un CRF puede etiquetar palabra por palabra clasificándolas en una clase del grupo de todos los tags de POS.</p>
+<p>Conditional random field (campo aleatorio condicional o CRF) es otro algorimo usado para datos secuenciales. Conceptualmente, CRF realiza una tarea de clasificación en cada elemento de la secuencia. Imagina el mismo ejemplo de POS tagging, donde un CRF puede etiquetar palabra por palabra clasificándolas en una clase del grupo de todos los tags de POS.</p>
 <p>Dado que tiene en cuenta el input secuencial y el contexto de los tags, se vuelve más expresivo que los métodos de clasificación habituales y, en general, funciona mejor. Los CRF superan a los HMM en tareas como el POS tagging, que se basan en la naturaleza secuencial del lenguaje.</p>
 </section>
 </section>
@@ -529,34 +547,63 @@ Además de esto, HMM también hace la suposición de Márkov, lo que significa q
 <h4>- Recurrent Neural Networks (RNN)<a class="headerlink" href="#recurrent-neural-networks-rnn" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>El lenguaje es inherentemente secuencial. Una oración en cualquier lenguaje fluye desde una dirección a otra (por ejemplo, en inglés o español se lee desde izquierda a derecha). Por lo tanto, un modelo que pueda leer progresivamente un input de texto desde un extremo a otro puede ser muy útil para el entendimiento del lenguaje. Las redes neuronales recurrentes (RNNs) están especialmente diseñadas para mantener este procesamiento secuencial y aprendizaje en mente. RNNs tienen unidades neuronales que son capaces de recordar lo que han procesado hasta ahora. Esta memoria es temporal, y la información es almacenada y actualizada con cada paso mientras RNN lee la siguiente palabra del input.</p>
 <p>La siguiente imagen ilustra una RNN desenrollada y como esta sigue la pista de sus inputs en distintos momentos.</p>
-<a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0113.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0113.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0113.png" style="width: 500px;" /></a>
+<p></br></br></br></p>
+<center>
+    <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0113.png" width="500" />
+</center>
+</br></br></br>
 <p>Las RNN son muy poderosas y trabajan muy bien resolviendo problemas de NLP, como la clasificación de texto, reconocimiento de entidades nombradas (<em>named entity recognition</em> o NER), traducción automática, etc. También es posible generar texto con RNNs donde el objetivo es leer el texto que precede y predecir la palabra siguiente o el siguiente caracter.</p>
 </section>
 <section id="long-short-term-memory-lstm">
 <h4>- Long short-term memory (LSTM)<a class="headerlink" href="#long-short-term-memory-lstm" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>A pesar de su capacidad y versatilidad, RNNs sufren el problema de la “pérdida de memoria”, estas no pueden recordad largos contextos, y por lo tanto, no son eficientes cuando el input es grande, situación que típicamente es el caso con los inputs de texto. Long short-term memory networks (LSTMs), un tipo de RNN, fueron inventadas para mitigar este defecto de las RNNs.</p>
+<p>A pesar de su capacidad y versatilidad, RNNs sufren el problema de la “pérdida de memoria”, estas no pueden recordar largos contextos, y por lo tanto, no son eficientes cuando el input es grande, situación que típicamente es el caso con los inputs de texto. Long short-term memory networks (LSTMs), un tipo de RNN, fueron inventadas para mitigar este defecto de las RNNs.</p>
 <p>LSTM sortea este problema dejando de lado el contexto irrelevante y recordando solo la parte del contexto que se necesita para resolver la tarea en cuestión. Esto alivia la carga de recordar un contexto muy largo en una representación vectorial. Los LSTM han reemplazado a los RNN en la mayoría de las aplicaciones debido a esta solución.</p>
-<p>La siguiente figura ilustra la arquitectura de una sola celda LSTM</p>
-<a class="reference internal image-reference" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0114.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0114.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0114.png" style="width: 500px;" /></a>
+<p>La siguiente figura ilustra la arquitectura de una sola celda LSTM.</p>
+<p></br></br></br></p>
+<center>
+    <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0114.png" width="500" />
+</center>
+</br></br></br>
 </section>
 <section id="convolutional-neural-networks">
 <h4>- Convolutional neural networks<a class="headerlink" href="#convolutional-neural-networks" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Las redes neuronales convolucionales (CNNs) son bastante populares y altamente usadas en tareas de visión computacional como clasificación de imágenes, reconocimiento de video, etc. Además, las CNNs hay sido bastante exitosas en NLP, especialmente en las tareas de clasificación de texto. Uno puede reemplazar cada palabra de una oración en una representación vectorizada de la misma, donde todos y cada uno los vectores son del mismo tamaño (<em>Word Embeddings</em>).</p>
 <p>Además, estos vectores pueden ser apilados uno sobre otro para formar una matriz o un arreglo en 2D de dimensiones <em>n</em> x <em>d</em>, donde <em>n</em> es el número de palabras en una oración y <em>d</em> es el tamaño de la vectorización de las palabras. Esta matriz puede ser tratada de forma similar a una imagen y puede ser modelada por una CNN.</p>
-<p><strong>La ventaja principal que tienen las CNNs es su capacidad de mirar un grupo de palabras contiguas usando una ventana de contexto.</strong> Por ejemplo: se está haciendo un análisis de sentimiento y se obtiene la siguiente oración: <em>“I like this movie very much!”</em>. Para dar sentido a esta oración, hay que analizar cada una de las palabras y diferentes conjuntos que se forman a partir de las palabras contiguas. Las CNNs pueden hacer exactamente esto por definición de su arquitectura.</p>
-<p><a class="reference internal" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0115.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0115.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0115.png" style="width: 500px;" /></a></p>
-<p>Como se muestra en la imagen, CNN utiliza una colección de capas de convolución y agrupación (<em>pooling</em>) para lograr esta representación condensada del texto, que luego se alimenta como entrada a una capa completamente conectada para aprender algunas tareas de NLP como la clasificación de texto.</p>
+<p><strong>La ventaja principal que tienen las CNNs es su capacidad de mirar un grupo de palabras contiguas usando una ventana de contexto.</strong> Por ejemplo: se está haciendo un análisis de sentimiento y se obtiene la siguiente oración: <em>“I like this movie very much!”</em>. Para dar sentido a esta oración hay que analizar cada una de las palabras y los diferentes conjuntos que se forman a partir de las palabras contiguas. Las CNNs pueden hacer exactamente esto por definición de su arquitectura.</p>
+<p></br></br></br></p>
+<center>
+    <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0115.png
+" width="500" />
+</center>
+</br></br></br><p>Como se muestra en la imagen, CNN utiliza una colección de capas de convolución y agrupación (<em>pooling</em>) para lograr esta representación condensada del texto, que luego se alimenta como entrada a una capa completamente conectada para aprender algunas tareas de NLP como la clasificación de texto.</p>
 </section>
 <section id="transformers">
 <h4>- Transformers<a class="headerlink" href="#transformers" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>Los Transformers son la última gran innovación en NLP. Los modelos de transformers</p>
-<p><a class="reference internal" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0116.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0116.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0116.png" style="width: 500px;" /></a>
-<a class="reference internal" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0117.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0117.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0117.png" style="width: 500px;" /></a></p>
+<p>Los Transformers son la última gran innovación en NLP. Los modelos de transformers modelan el contexto textual pero no de manera secuencial. Dada una palabra de input, prefiere mirar todas las palabras a su alrededor (lo que se conoce como <strong>autoatención</strong> (<em>self-attention</em>)) y representar cada palabra con respecto a su contexto. Por ejemplo, la palabra “banco” puede tener diferentes significados según el contexto en el que aparezca. Si el contexto habla de finanzas, entonces “banco” probablemente denota una institución financiera.
+Por otro lado, si el contexto menciona un río, entonces probablemente indica una orilla del río (river banks es orilla de río en inglés).</p>
+<p>Los transformadores pueden modelar dicho contexto y, por lo tanto, se han utilizado mucho en tareas de NLP debido a esta mayor capacidad de representación en comparación con otras redes profundas.</p>
+<p>Últimamente, se han estado usando transformers que han sido alimentados por millones de datos para hacer <a class="reference external" href="https://en.wikipedia.org/wiki/Transfer_learning"><em>transfer learning</em></a>. Transfer learning es una técnica en inteligencia artificial que busca transferir el conocimiento adquirido por un modelo que resuelve un problema específico a otros problemas diferentes, y que están de cierta forma relacionados con el problema raíz. La idea en este caso</p>
+<p></br></br></br></p>
+<center>
+    <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0116.png
+" width="500" />
+</center>
+</br></br></br>
+<p>asdad</p>
+<p></br></br></br></p>
+<center>
+    <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0117.png
+" width="400" />
+</center>
+</br></br></br>
 </section>
 <section id="autoencoders">
 <h4>- Autoencoders<a class="headerlink" href="#autoencoders" title="Enlazar permanentemente con este título">¶</a></h4>
-<p><a class="reference internal" href="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0118.png"><img alt="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0118.png" src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0118.png" style="width: 500px;" /></a></p>
-</section>
+<p></br></br></br></p>
+<center>
+    <img src="https://www.oreilly.com/library/view/practical-natural-language/9781492054047/assets/pnlp_0118.png
+" width="500" />
+</center></section>
 </section>
 </section>
 </section>
