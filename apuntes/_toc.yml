@@ -11,7 +11,7 @@ parts:
     - file: chapters/01-introduccion/03-ml-dl-nlp
     - file: chapters/01-introduccion/04-nlp
     
-  - caption: Pipelines de procesamiento 
+  - caption: Pipeline de procesamiento 
     chapters:
     - file: chapters/02-pipeline/00-pipeline
     - file: chapters/02-pipeline/01-data-adquisition
