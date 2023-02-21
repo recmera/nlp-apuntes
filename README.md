@@ -1,3 +1,3 @@
 # Libro de Natural Language Processing 
 
-https://rickiwasho.github.io/nlp-apuntes/
+https://recmera.github.io/nlp-apuntes
